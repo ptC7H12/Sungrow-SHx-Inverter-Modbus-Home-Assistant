@@ -9,7 +9,7 @@ modbus:
     #delay: 5
     #timeout: 5
     sensors:
-      - name: Daily PV generation & battery discharge
+      - name: Heute: Eigene Energienutzung (PV & Akku)
         slave: !secret sungrow_modbus_slave
         address: 5002
         input_type: input
@@ -23,7 +23,7 @@ modbus:
         scale: 0.1
         scan_interval: 600
 
-      - name: Total PV generation & battery discharge
+      - name:  Gesamt: Eigene Energienutzung (PV & Akku) 
         slave: !secret sungrow_modbus_slave
         address: 5003
         input_type: input
@@ -37,7 +37,7 @@ modbus:
         scale: 0.1
         scan_interval: 600
 
-      - name: Inverter temperature
+      - name:  Temperatur im Wechselrichter 
         slave: !secret sungrow_modbus_slave
         address: 5007
         input_type: input
@@ -49,7 +49,7 @@ modbus:
         scale: 0.1
         scan_interval: 10
 
-      - name: MPPT1 voltage
+      - name: MPPT1 Spannung
         slave: !secret sungrow_modbus_slave
         address: 5010
         input_type: input
@@ -62,7 +62,7 @@ modbus:
         scale: 0.1
         scan_interval: 10
 
-      - name: MPPT1 current
+      - name: MPPT1 Strom
         slave: !secret sungrow_modbus_slave
         address: 5011
         input_type: input
@@ -75,7 +75,7 @@ modbus:
         scale: 0.1
         scan_interval: 10
 
-      - name: MPPT2 voltage
+      - name: MPPT2 Spannung
         slave: !secret sungrow_modbus_slave
         address: 5012
         input_type: input
@@ -88,7 +88,7 @@ modbus:
         scale: 0.1
         scan_interval: 10
 
-      - name: MPPT2 current
+      - name: MPPT2 Strom
         slave: !secret sungrow_modbus_slave
         address: 5013
         input_type: input
@@ -101,7 +101,7 @@ modbus:
         scale: 0.1
         scan_interval: 10
 
-      - name: Total DC power
+      - name: Aktuell: PV-Leistung
         slave: !secret sungrow_modbus_slave
         address: 5016
         input_type: input
@@ -115,7 +115,7 @@ modbus:
         scale: 1
         scan_interval: 10
 
-      - name: Reactive power
+      - name: Blindleistung
         slave: !secret sungrow_modbus_slave
         address: 5032
         input_type: input
@@ -129,7 +129,7 @@ modbus:
         scale: 1
         scan_interval: 10
 
-      - name: Power factor
+      - name: Leistungsfaktor
         slave: !secret sungrow_modbus_slave
         address: 5034
         input_type: input
@@ -154,7 +154,7 @@ modbus:
         scale: 1
         scan_interval: 10
 
-      - name: Running state
+      - name: Betriebsstatus
         slave: !secret sungrow_modbus_slave
         address: 13000
         input_type: input
@@ -165,7 +165,7 @@ modbus:
         scale: 1
         scan_interval: 10
 
-      - name: Daily PV generation
+      - name: Heute: PV-Stromerzeugung
         slave: !secret sungrow_modbus_slave
         address: 13001
         input_type: input
