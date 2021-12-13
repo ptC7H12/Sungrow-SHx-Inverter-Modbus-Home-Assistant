@@ -143,7 +143,7 @@ modbus:
         scale: 0.001
         scan_interval: 10
 
-      - name: System state
+      - name: Systemstatus
         slave: !secret sungrow_modbus_slave
         address: 12999
         input_type: input
@@ -165,7 +165,7 @@ modbus:
         scale: 1
         scan_interval: 10
 
-      - name: Heute: PV-Stromerzeugung
+      - name: Heute: PV-Energieerzeugung
         slave: !secret sungrow_modbus_slave
         address: 13001
         input_type: input
@@ -179,7 +179,7 @@ modbus:
         scale: 0.1
         scan_interval: 600
 
-      - name: Total PV generation
+      - name: Gesamt: PV-Energieerzeugung
         slave: !secret sungrow_modbus_slave
         address: 13002
         input_type: input
@@ -193,7 +193,7 @@ modbus:
         scale: 0.1
         scan_interval: 600
 
-      - name: Daily exported energy from PV
+      - name: Heute: PV-Energieeinspeisung
         slave: !secret sungrow_modbus_slave
         address: 13004
         input_type: input
@@ -207,7 +207,7 @@ modbus:
         scale: 0.1
         scan_interval: 600
 
-      - name: Total exported energy from PV
+      - name: Gesamt: PV-Energieeinspeisung 
         slave: !secret sungrow_modbus_slave
         address: 13005
         input_type: input
@@ -235,7 +235,7 @@ modbus:
         scale: 1
         scan_interval: 10
 
-      - name: Export power
+      - name: Gesamt: Wirkleistung
         slave: !secret sungrow_modbus_slave
         address: 13009
         input_type: input
@@ -249,7 +249,7 @@ modbus:
         scale: 1
         scan_interval: 10
 
-      - name: Daily battery charge from PV
+      - name: Heute: Batterieladung vom PV
         slave: !secret sungrow_modbus_slave
         address: 13011
         input_type: input
@@ -263,7 +263,7 @@ modbus:
         scale: 0.1
         scan_interval: 600
 
-      - name: Total battery charge from PV
+      - name: Gesamt: Batterieladung vom PV
         slave: !secret sungrow_modbus_slave
         address: 13012
         input_type: input
@@ -277,7 +277,7 @@ modbus:
         scale: 0.1
         scan_interval: 600
 
-      - name: Daily direct energy consumption
+      - name: Heute: Energieverbrauch von PV
         slave: !secret sungrow_modbus_slave
         address: 13016
         input_type: input
@@ -291,7 +291,7 @@ modbus:
         scale: 0.1
         scan_interval: 600
 
-      - name: Total direct energy consumption
+      - name: Gesamt: Energieverbrauch von PV
         slave: !secret sungrow_modbus_slave
         address: 13017
         input_type: input
@@ -305,7 +305,7 @@ modbus:
         scale: 0.1
         scan_interval: 600
 
-      - name: Battery voltage
+      - name: Batteriespannung
         slave: !secret sungrow_modbus_slave
         address: 13019
         input_type: input
@@ -318,7 +318,7 @@ modbus:
         scale: 0.1
         scan_interval: 10
 
-      - name: Battery current
+      - name: Batteriestrom
         slave: !secret sungrow_modbus_slave
         address: 13020
         input_type: input
@@ -331,7 +331,7 @@ modbus:
         scale: 0.1
         scan_interval: 10
 
-      - name: Battery power
+      - name: Batterieladeleistung
         slave: !secret sungrow_modbus_slave
         address: 13021
         input_type: input
@@ -345,7 +345,7 @@ modbus:
         scale: 1
         scan_interval: 10
 
-      - name: Battery level
+      - name: Batteriekapazität
         slave: !secret sungrow_modbus_slave
         address: 13022
         input_type: input
@@ -359,7 +359,7 @@ modbus:
         scale: 0.1
         scan_interval: 60
 
-      - name: Battery state of health
+      - name: Batteriegesundheit
         slave: !secret sungrow_modbus_slave
         address: 13023
         input_type: input
@@ -372,7 +372,7 @@ modbus:
         scale: 0.1
         scan_interval: 10
 
-      - name: Battery temperature
+      - name: Batterietemperatur
         slave: !secret sungrow_modbus_slave
         address: 13024
         input_type: input
@@ -384,7 +384,7 @@ modbus:
         scale: 0.1
         scan_interval: 60
 
-      - name: Daily battery discharge
+      - name: Heute: Batterie Entladeleistung
         slave: !secret sungrow_modbus_slave
         address: 13025
         input_type: input
@@ -398,7 +398,7 @@ modbus:
         scale: 0.1
         scan_interval: 600
 
-      - name: Total battery discharge
+      - name: Gesamt: Batterie Entladeleistung
         slave: !secret sungrow_modbus_slave
         address: 13026
         input_type: input
@@ -411,8 +411,21 @@ modbus:
         state_class: total_increasing
         scale: 0.1
         scan_interval: 10
+        
+      - name: Heute: Eigenverbrauchsquote
+        slave: !secret sungrow_modbus_slave
+        address: 13028
+        input_type: input
+        count: 1
+        data_type: uint16
+        swap: word
+        precision: 0
+        unit_of_measurement: "%"
+        state_class: measurement
+        scale: 0.1
+        scan_interval: 10
 
-      - name: Grid state
+      - name: Netzstatus
         slave: !secret sungrow_modbus_slave
         address: 13029
         input_type: input
@@ -423,7 +436,7 @@ modbus:
         scale: 0.1
         scan_interval: 10
 
-      - name: Total active power
+      - name: Aktuell: Eigenverbrauch
         slave: !secret sungrow_modbus_slave
         address: 13033
         input_type: input
@@ -437,7 +450,7 @@ modbus:
         scale: 1
         scan_interval: 10
 
-      - name: Daily imported energy
+      - name: Heute: Gekaufte Energie
         slave: !secret sungrow_modbus_slave
         address: 13035
         input_type: input
@@ -451,7 +464,7 @@ modbus:
         scale: 0.1
         scan_interval: 600
 
-      - name: Total imported energy
+      - name: Gesamt: Gekaufte Energie
         slave: !secret sungrow_modbus_slave
         address: 13036
         input_type: input
@@ -465,7 +478,7 @@ modbus:
         scale: 0.1
         scan_interval: 600
 
-      - name: Daily battery charge
+      - name: Heute: Batterie Ladeleistung
         slave: !secret sungrow_modbus_slave
         address: 13039
         input_type: input
@@ -479,7 +492,7 @@ modbus:
         scale: 0.1
         scan_interval: 600
 
-      - name: Total battery charge
+      - name: Gesamt: Batterie Ladeleistung
         slave: !secret sungrow_modbus_slave
         address: 13040
         input_type: input
@@ -493,7 +506,7 @@ modbus:
         scale: 0.1
         scan_interval: 600
 
-      - name: Daily exported energy
+      - name: Heute: Energie Netzeinspeisung
         slave: !secret sungrow_modbus_slave
         address: 13044
         input_type: input
@@ -507,7 +520,7 @@ modbus:
         scale: 0.1
         scan_interval: 600
 
-      - name: Total exported energy
+      - name: Gesamt: Energie Netzeinspeisung
         slave: !secret sungrow_modbus_slave
         address: 13045
         input_type: input
