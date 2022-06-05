@@ -221,7 +221,7 @@ modbus:
         scale: 0.1
         scan_interval: 600
 
-      - name: Load power
+      - name: Gesamt: Wirkleistung
         slave: !secret sungrow_modbus_slave
         address: 13007
         input_type: input
@@ -235,7 +235,7 @@ modbus:
         scale: 1
         scan_interval: 10
 
-      - name: Gesamt: Wirkleistung
+      - name: Aktuell: Leistung am Übergabepunkt
         slave: !secret sungrow_modbus_slave
         address: 13009
         input_type: input
@@ -534,19 +534,18 @@ modbus:
         scale: 0.1
         scan_interval: 600
 
-      - name: Charge discharge power
+      - name: Netzfehler
         slave: !secret sungrow_modbus_slave
         address: 13051
         input_type: input
         count: 1
-        data_type: int16
+        data_type: uint32
         swap: word
         precision: 0
-        unit_of_measurement: W
         device_class: power
-        state_class: measurement
+        state_class: energy
         scale: 1
-        scan_interval: 10
+        scan_interval: 600
 
 binary_sensor:
   - platform: template
