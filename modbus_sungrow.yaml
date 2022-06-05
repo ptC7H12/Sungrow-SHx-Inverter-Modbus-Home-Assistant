@@ -9,7 +9,7 @@ modbus:
     #delay: 5
     #timeout: 5
     sensors:
-      - name: Heute: Eigene Energienutzung (PV & Akku)
+      - name: Heute&#58; Eigene Energienutzung (PV & Akku)
         slave: !secret sungrow_modbus_slave
         address: 5002
         input_type: input
@@ -23,7 +23,7 @@ modbus:
         scale: 0.1
         scan_interval: 600
 
-      - name:  Gesamt: Eigene Energienutzung (PV & Akku) 
+      - name:  Gesamt&#58; Eigene Energienutzung (PV & Akku) 
         slave: !secret sungrow_modbus_slave
         address: 5003
         input_type: input
@@ -101,7 +101,7 @@ modbus:
         scale: 0.1
         scan_interval: 10
 
-      - name: Aktuell: PV-Leistung
+      - name: Aktuell&#58; PV-Leistung
         slave: !secret sungrow_modbus_slave
         address: 5016
         input_type: input
@@ -165,7 +165,7 @@ modbus:
         scale: 1
         scan_interval: 10
 
-      - name: Heute: PV-Energieerzeugung
+      - name: Heute&#58; PV-Energieerzeugung
         slave: !secret sungrow_modbus_slave
         address: 13001
         input_type: input
@@ -179,7 +179,7 @@ modbus:
         scale: 0.1
         scan_interval: 600
 
-      - name: Gesamt: PV-Energieerzeugung
+      - name: Gesamt&#58; PV-Energieerzeugung
         slave: !secret sungrow_modbus_slave
         address: 13002
         input_type: input
@@ -193,7 +193,7 @@ modbus:
         scale: 0.1
         scan_interval: 600
 
-      - name: Heute: PV-Energieeinspeisung
+      - name: Heute&#58; PV-Energieeinspeisung
         slave: !secret sungrow_modbus_slave
         address: 13004
         input_type: input
@@ -207,7 +207,7 @@ modbus:
         scale: 0.1
         scan_interval: 600
 
-      - name: Gesamt: PV-Energieeinspeisung 
+      - name: Gesamt&#58; PV-Energieeinspeisung 
         slave: !secret sungrow_modbus_slave
         address: 13005
         input_type: input
@@ -221,7 +221,7 @@ modbus:
         scale: 0.1
         scan_interval: 600
 
-      - name: Gesamt: Wirkleistung
+      - name: Gesamt&#58; Wirkleistung
         slave: !secret sungrow_modbus_slave
         address: 13007
         input_type: input
@@ -235,7 +235,7 @@ modbus:
         scale: 1
         scan_interval: 10
 
-      - name: Aktuell: Leistung am Übergabepunkt
+      - name: Aktuell&#58; Leistung am Übergabepunkt
         slave: !secret sungrow_modbus_slave
         address: 13009
         input_type: input
@@ -249,7 +249,7 @@ modbus:
         scale: 1
         scan_interval: 10
 
-      - name: Heute: Batterieladung vom PV
+      - name: Heute&#58; Batterieladung vom PV
         slave: !secret sungrow_modbus_slave
         address: 13011
         input_type: input
@@ -263,7 +263,7 @@ modbus:
         scale: 0.1
         scan_interval: 600
 
-      - name: Gesamt: Batterieladung vom PV
+      - name: Gesamt&#58; Batterieladung vom PV
         slave: !secret sungrow_modbus_slave
         address: 13012
         input_type: input
@@ -277,7 +277,7 @@ modbus:
         scale: 0.1
         scan_interval: 600
 
-      - name: Heute: Energieverbrauch von PV
+      - name: Heute&#58; Energieverbrauch von PV
         slave: !secret sungrow_modbus_slave
         address: 13016
         input_type: input
@@ -291,7 +291,7 @@ modbus:
         scale: 0.1
         scan_interval: 600
 
-      - name: Gesamt: Energieverbrauch von PV
+      - name: Gesamt&#58; Energieverbrauch von PV
         slave: !secret sungrow_modbus_slave
         address: 13017
         input_type: input
@@ -384,7 +384,7 @@ modbus:
         scale: 0.1
         scan_interval: 60
 
-      - name: Heute: Batterie Entladeleistung
+      - name: Heute&#58; Batterie Entladeleistung
         slave: !secret sungrow_modbus_slave
         address: 13025
         input_type: input
@@ -398,7 +398,7 @@ modbus:
         scale: 0.1
         scan_interval: 600
 
-      - name: Gesamt: Batterie Entladeleistung
+      - name: Gesamt&#58; Batterie Entladeleistung
         slave: !secret sungrow_modbus_slave
         address: 13026
         input_type: input
@@ -412,7 +412,7 @@ modbus:
         scale: 0.1
         scan_interval: 10
         
-      - name: Heute: Eigenverbrauchsquote
+      - name: Heute&#58; Eigenverbrauchsquote
         slave: !secret sungrow_modbus_slave
         address: 13028
         input_type: input
@@ -436,7 +436,7 @@ modbus:
         scale: 0.1
         scan_interval: 10
 
-      - name: Aktuell: Eigenverbrauch
+      - name: Aktuell&#58; Eigenverbrauch
         slave: !secret sungrow_modbus_slave
         address: 13033
         input_type: input
@@ -450,7 +450,7 @@ modbus:
         scale: 1
         scan_interval: 10
 
-      - name: Heute: Gekaufte Energie
+      - name: Heute&#58; Gekaufte Energie
         slave: !secret sungrow_modbus_slave
         address: 13035
         input_type: input
@@ -464,7 +464,7 @@ modbus:
         scale: 0.1
         scan_interval: 600
 
-      - name: Gesamt: Gekaufte Energie
+      - name: Gesamt&#58; Gekaufte Energie
         slave: !secret sungrow_modbus_slave
         address: 13036
         input_type: input
@@ -478,7 +478,7 @@ modbus:
         scale: 0.1
         scan_interval: 600
 
-      - name: Heute: Batterie Ladeleistung
+      - name: Heute&#58; Batterie Ladeleistung
         slave: !secret sungrow_modbus_slave
         address: 13039
         input_type: input
@@ -492,7 +492,7 @@ modbus:
         scale: 0.1
         scan_interval: 600
 
-      - name: Gesamt: Batterie Ladeleistung
+      - name: Gesamt&#58; Batterie Ladeleistung
         slave: !secret sungrow_modbus_slave
         address: 13040
         input_type: input
@@ -506,7 +506,7 @@ modbus:
         scale: 0.1
         scan_interval: 600
 
-      - name: Heute: Energie Netzeinspeisung
+      - name: Heute&#58; Energie Netzeinspeisung
         slave: !secret sungrow_modbus_slave
         address: 13044
         input_type: input
@@ -520,7 +520,7 @@ modbus:
         scale: 0.1
         scan_interval: 600
 
-      - name: Gesamt: Energie Netzeinspeisung
+      - name: Gesamt&#58; Energie Netzeinspeisung
         slave: !secret sungrow_modbus_slave
         address: 13045
         input_type: input
